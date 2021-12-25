@@ -51,7 +51,7 @@ def Bot(update):
       SendMsg(userid,"List Command :\n@Xdf57Bot : /start /help /status (EN)Just paste url tiktok video on the bot (ID)Cukup paste link video tiktok di bot\n\n/donation - for donation bot\n/status - show status bot",msgid)
     elif pesan.startswith("/donation"):
       SendMsg(userid,"Support me on\n\nko-fi (EN): https://ko-fi.com/xdf54\nsaweria (ID): https://saweria.co/Xdf54\ntrakteerid (ID): https://trakteer.id/Rafiqbotutihe\nQRIS (EWALLET,BANK): https://t.me/YugoslavBoy",msgid)
-    elif "/owner" in pesan:
-      SendMsg(userid,"Mau kenalan ma owner bot ya kak nihh @YugoslavBoy,msgid)
+    elif pesan.startswith("/Owner"):
+      SendMsg(userid,"Pengen kenalan ma owner ku? @YugoslavBoy",msgid)  
   except KeyError:
     return
