@@ -36,7 +36,7 @@ def Bot(update):
     first_name = update['message']['chat']['first_name']
     print(f"{get_time(timee)}-> {userid} - {first_name} -> {pesan}")
     if pesan.startswith('/start'):
-      SendMsg(userid,"<b>Welcome to Xdf 57 Bot !</b>\n\n<b>List Command </b>:\n<i>@xdf57Bot /start /help /status </i>!!\n",msgid)
+      SendMsg(userid,"<b>Welcome to Xdf 57 Bot !</b>\n\n<b>List Command </b>:\n<i>@xdf57Bot /start /help /status (EN)just paste the tiktok video url on the bot (ID)Cukup paste kan link video tiktok di bot </i>!!\n",msgid)
     elif "tiktok.com" in pesan:
       aplikasi = module.Tiktok()
       getvid = aplikasi.musicallydown(url=pesan)
@@ -48,8 +48,10 @@ def Bot(update):
       else:
         SendVideo(userid,msgid)
     elif "/help" in pesan:
-      SendMsg(userid,"List Command :\n@Xdf57Bot : /start /help /status !\n\n/donation - for donation bot\n/status - show status bot",msgid)
+      SendMsg(userid,"List Command :\n@Xdf57Bot : /start /help /status (EN)Just paste url tiktok video on the bot (ID)Cukup paste link video tiktok di bot\n\n/donation - for donation bot\n/status - show status bot",msgid)
     elif pesan.startswith("/donation"):
       SendMsg(userid,"Support me on\n\nko-fi (EN): https://ko-fi.com/xdf54\nsaweria (ID): https://saweria.co/Xdf54\ntrakteerid (ID): https://trakteer.id/Rafiqbotutihe\nQRIS (EWALLET,BANK): https://t.me/YugoslavBoy",msgid)
+    elif "/owner" in pesan:
+      SendMsg(userid,"Mau kenalan ma owner bot ya kak nihh @YugoslavBoy,msgid)
   except KeyError:
     return
